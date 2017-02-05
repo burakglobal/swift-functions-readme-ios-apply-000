@@ -6,39 +6,59 @@ func sayHello() {
 sayHello()
 sayHello()
 
-// Uncomment this line to see the error that is printed in the console.
-// (You can uncomment a line by removing the // at the beginning of the line.)
-//print(greeting)
 
+// Funtion Parameters Examples
 
-func sayHelloToGarfield() {
-    print("Hello, Garfield, why do you sleep so much?")
+func burakSayHello()
+{
+print("Simple Hello")
 }
 
-func sayHelloToBuster() {
-    print("Hello, Buster, why do you sleep so much?")
+func burakSayHello(person: String, age:Int)
+{
+    print("Hello \(person.uppercased())")
+    print("Your Age is \(age)")
+    print("Hello to \(person) I hope you are having great day")
+    //
 }
 
-func sayHelloToScratchy() {
-    print("Hello, Scratchy, why do you sleep so much?")
+let name: String = String()
+
+burakSayHello()
+
+burakSayHello(person: "burak", age: 33)
+
+burakSayHello(person: name, age:22)
+
+func burakSayhelloWithReturn(animal: String) ->String
+{
+
+    let greeting = " Hello \(animal), what a cute pet you are?"
+
+    return greeting
 }
 
 
-func sayHelloToCat(catName: String) {
-    print("Hello, \(catName), why do you sleep so much?")
+print(burakSayhelloWithReturn(animal: "Coco"))
+let greetingForCat = burakSayhelloWithReturn(animal: "Dojo")
+print(greetingForCat)
+
+
+
+
+// Multiple Parameters
+func sayHello(toPerson: String, withAge: Int, withGreeting:String) -> String
+{
+let retval = "\(withGreeting) \(toPerson) \(withAge)"
+
+return retval
+    
 }
 
+let retval = sayHello(toPerson: "Burak", withAge: 34, withGreeting: "Naber")
 
-func sayHello(name: String) {
-    print("Hello \(name), why do you sleep so much?")
-}
+print(retval)
 
-sayHello(name: "Mittens")
-// Prints "Hello Mittens, why do you sleep so much?"
 
-sayHello(name: "Socks")
-// Prints "Hello Socks, why do you sleep so much?"
 
-let dumpsterCat = "Rocky"
-sayHello(name: dumpsterCat)
-// Prints "Hello Rocky, why do you sleep so much?"
+
